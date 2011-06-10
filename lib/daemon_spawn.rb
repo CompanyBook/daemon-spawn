@@ -186,7 +186,6 @@ module DaemonSpawn
       daemons = find(opts)
       if daemons.empty?
         puts "No PID files found. Is the daemon started?"
-        exit 1
       else
         daemons.each { |d| DaemonSpawn.stop(d) }
       end
